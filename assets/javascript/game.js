@@ -1,3 +1,10 @@
+myAudio = new Audio('kahoot.mp3');
+myAudio.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
+myAudio.play();
+
 
 var wins = 0;
 
@@ -8,10 +15,10 @@ var total = 0;
 
 var randomArray = [];
 
-var clickNum1 = [Math.floor(Math.random()*12 +1)];
-var clickNum2 = [Math.floor(Math.random()*12 +1)];
-var clickNum3 = [Math.floor(Math.random()*12 +1)];
-var clickNum4 = [Math.floor(Math.random()*12 +1)];
+var clickNum1 = [Math.floor(Math.random()*11 +1)];
+var clickNum2 = [Math.floor(Math.random()*11 +1)];
+var clickNum3 = [Math.floor(Math.random()*11 +1)];
+var clickNum4 = [Math.floor(Math.random()*11 +1)];
 
 function resetTotal(){
   total = 0;
@@ -21,10 +28,10 @@ function resetRandom(){
 }
 
 function resetClick(){
-  clickNum1 = [Math.floor(Math.random()*12 +1)];
-  clickNum2 = [Math.floor(Math.random()*12 +1)];
-  clickNum3 = [Math.floor(Math.random()*12 +1)];
-  clickNum4 = [Math.floor(Math.random()*12 +1)];
+  clickNum1 = [Math.floor(Math.random()*11 +1)];
+  clickNum2 = [Math.floor(Math.random()*11 +1)];
+  clickNum3 = [Math.floor(Math.random()*11 +1)];
+  clickNum4 = [Math.floor(Math.random()*11 +1)];
 }
 
 function generateRandom(){
@@ -43,7 +50,7 @@ function generateNumber(){
   if(total > randomArray){
     alert("you lose");
     losses++;
-   $("#lossUpdate").html("<div>"+ "losses:" + losses + "</div>")
+   $("#lossUpdate").html("<div>"+ "losses:" + " " + losses + "</div>")
     generateRandom();
     resetClick();
     resetTotal();
@@ -52,7 +59,7 @@ function generateNumber(){
   else if(total == randomArray){
     alert("you gain a win!");
     wins++;
-    $("#winUpdate").html("<div>"+ "wins:" + wins +"</div>")
+    $("#winUpdate").html("<div>"+ "wins:" + " " + wins +"</div>")
     generateRandom();
     resetClick();
     resetTotal();
