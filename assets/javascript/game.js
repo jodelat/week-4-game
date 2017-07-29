@@ -43,7 +43,7 @@ function generateNumber(){
   if(total > randomArray){
     alert("you lose");
     losses++;
-   $("#loss").html("<div>" + "losses:" + losses + "</div>")
+   $("#lossUpdate").html("<div>"+ "losses:" + losses + "</div>")
     generateRandom();
     resetClick();
     resetTotal();
@@ -52,7 +52,7 @@ function generateNumber(){
   else if(total == randomArray){
     alert("you gain a win!");
     wins++;
-    $("#win").html("<div>" + "wins:" + wins + "</div>")
+    $("#winUpdate").html("<div>"+ "wins:" + wins +"</div>")
     generateRandom();
     resetClick();
     resetTotal();
@@ -61,7 +61,9 @@ function generateNumber(){
 }
 
 $(document).ready(function(){
+
   generateRandom();
+
   $("#blueCrystal").on("click", function(){
     total += parseInt(clickNum1);
     generateNumber();
