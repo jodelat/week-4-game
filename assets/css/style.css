@@ -1,0 +1,84 @@
+body{
+  background-color: blue;
+  font-family: arial;
+  font-size: 18px;
+}
+h1{
+  background-color: orange;
+  width: 355px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+.information{
+  background: green;
+  height: 400px;
+  width: 300px;
+  border-style: solid;
+  border-color: black;
+  border-width: 6px;
+  padding-bottom: 5px;
+}
+
+#random-number{
+  background-color: green;
+  height: 125px;
+  width: 120px;
+  text-align: center;
+  font-size: 40px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+#win-loss{
+  background-color: #dddddd;
+  height: 125px;
+  width: 150px;
+  font-size: 22px;
+  border-style: solid;
+  border-color: #black;
+  border-width: 3px;
+
+}
+.two-boxes{
+  float: bottom;
+}
+
+#blueCrystal{
+  height: 100px;
+  width: 100px;
+  float: center;
+}
+#greenCrystal{
+  height: 100px;
+  width: 100px;
+  float: center;
+}
+#pinkDiamond{
+  height: 100px;
+  width: 100px;
+  float: center;
+}
+#blueDiamond{
+  height: 100px;
+  width: 100px;
+  float: center;
+}
+.scores{
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  float: top;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+.scores p{
+  font-size: 28px;
+  text-align: center;
+
+}
+#scoreNumber{
+  font-size: 45px;
+  text-align: center;
+}
